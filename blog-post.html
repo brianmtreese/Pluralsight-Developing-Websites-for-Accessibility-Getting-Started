@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Blog Post | Carved Rock Fitness</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/post.css" />
+  </head>
+  <body id="page-body" class="page__animation--enabled">
+    <button id="page-animation-toggle" class="page__toggleAnimation" onclick="toggleAnimation()">
+      Disable Animation
+    </button>
+    <header class="pageHead">
+      <div class="container pageHead__container">
+        <a href="/" class="pageHead__logo">
+          <img src="/assets/images/carved-rock-logo.png" alt="Carved Rock Fitness" />
+        </a>
+        <div class="pageHead__content">
+          <form role="search" class="pageHead__search">
+            <input type="search" placeholder="What can we help you find" maxlength="70" autocomplete="off" class="pageHead__searchField" />
+            <button class="pageHead__searchButton">
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__searchIcon">
+                <use href="/assets/images/icons/icon-search.svg#icon"></use>
+              </svg>
+              <span class="pageHead__searchLabel">Search</span>
+            </button>
+          </form>
+          <ul class="pageHead__utilities">
+            <li class="pageHead__utilitiesItem">
+              <a href="account.html" class="pageHead__utilitiesLink">
+                <span>Sign In</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__utilitiesIcon">
+                  <use href="/assets/images/icons/icon-sign-in.svg#icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="pageHead__utilitiesItem">
+              <a href="locations.html" class="pageHead__utilitiesLink">
+                <span>Locations</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__utilitiesIcon">
+                  <use href="/assets/images/icons/icon-locations.svg#icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="pageHead__utilitiesItem">
+              <a href="nothing-here.html?cart" class="pageHead__utilitiesLink">
+                <span>Cart</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__utilitiesIcon">
+                  <use href="/assets/images/icons/icon-cart.svg#icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <nav class="pageHead__nav">
+            <ul class="pageHead__navList pageHead__navList--primary">
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <button aria-controls="page-head-subnav-0" aria-expanded="false" class="pageHead__navLink pageHead__navLink--primary">
+                  Clothing
+                </button>
+                <ul id="page-head-subnav-0" class="pageHead__navList pageHead__navList--nested">
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?tops" class="pageHead__navLink pageHead__navLink--nested">
+                      Tops
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?bottoms" class="pageHead__navLink pageHead__navLink--nested">
+                      Bottoms
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?jackets" class="pageHead__navLink pageHead__navLink--nested">
+                      Jackets
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?swimwear" class="pageHead__navLink pageHead__navLink--nested">
+                      Swimwear
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?underwear" class="pageHead__navLink pageHead__navLink--nested">
+                      Underwear
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?big-tall-and-short" class="pageHead__navLink pageHead__navLink--nested">
+                      Big, Tall &amp; Short
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--deals">
+                    <a href="nothing-here.html?clothing-deals" class="pageHead__navLink pageHead__navLink--nested">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__navIcon">
+                        <use href="/assets/images/icons/icon-sale.svg#icon"></use>
+                      </svg>
+                      Deals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--close">
+                    <button class="pageHead__navCloseButton" onclick="closeAllSubnavs()">
+                      <span class="visuallyHidden">
+                        Close
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <button aria-controls="page-head-subnav-1" aria-expanded="false" class="pageHead__navLink pageHead__navLink--primary">
+                  Footwear
+                </button>
+                <ul id="page-head-subnav-1" class="pageHead__navList pageHead__navList--nested">
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?boots" class="pageHead__navLink pageHead__navLink--nested">
+                      Boots
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?shoes" class="pageHead__navLink pageHead__navLink--nested">
+                      Shoes
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?sandals" class="pageHead__navLink pageHead__navLink--nested">
+                      Sandals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?slippers" class="pageHead__navLink pageHead__navLink--nested">
+                      Slippers
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?insoles" class="pageHead__navLink pageHead__navLink--nested">
+                      Insoles
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?socks" class="pageHead__navLink pageHead__navLink--nested">
+                      Socks
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--deals">
+                    <a href="nothing-here.html?footwear-deals" class="pageHead__navLink pageHead__navLink--nested">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__navIcon">
+                        <use href="/assets/images/icons/icon-sale.svg#icon"></use>
+                      </svg>
+                      Deals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--close">
+                    <button class="pageHead__navCloseButton" onclick="closeAllSubnavs()">
+                      <span class="visuallyHidden">
+                        Close
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <button aria-controls="page-head-subnav-2" aria-expanded="false" class="pageHead__navLink pageHead__navLink--primary">
+                  Equipment
+                </button>
+                <ul id="page-head-subnav-2" class="pageHead__navList pageHead__navList--nested">
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="product-details.html" class="pageHead__navLink pageHead__navLink--nested">
+                      Backpacks
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?tents" class="pageHead__navLink pageHead__navLink--nested">
+                      Tents
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?sleeping-bags" class="pageHead__navLink pageHead__navLink--nested">
+                      Sleeping Bags
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?pads-and-hammocks" class="pageHead__navLink pageHead__navLink--nested">
+                      Pads &amp; Hammocks
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?camp-kitchen" class="pageHead__navLink pageHead__navLink--nested">
+                      Camp Kitchen
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?camp-furniture" class="pageHead__navLink pageHead__navLink--nested">
+                      Camp Furniture
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?water" class="pageHead__navLink pageHead__navLink--nested">
+                      Water
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--deals">
+                    <a href="nothing-here.html?equipment-deals" class="pageHead__navLink pageHead__navLink--nested">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__navIcon">
+                        <use href="/assets/images/icons/icon-sale.svg#icon"></use>
+                      </svg>
+                      Deals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--close">
+                    <button class="pageHead__navCloseButton" onclick="closeAllSubnavs()">
+                      <span class="visuallyHidden">
+                        Close
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <button aria-controls="page-head-subnav-3" aria-expanded="false" class="pageHead__navLink pageHead__navLink--primary">
+                  Bags &amp; Travel
+                </button>
+                <ul id="page-head-subnav-3" class="pageHead__navList pageHead__navList--nested">
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="product-details.html" class="pageHead__navLink pageHead__navLink--nested">
+                      Backpacks
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?day-packs" class="pageHead__navLink pageHead__navLink--nested">
+                      Day Packs
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?hydration-packs" class="pageHead__navLink pageHead__navLink--nested">
+                      Hydration Packs
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?bay-carrier-packs" class="pageHead__navLink pageHead__navLink--nested">
+                      Bay Carrier Packs
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?waist-packs" class="pageHead__navLink pageHead__navLink--nested">
+                      Waist Packs
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--deals">
+                    <a href="nothing-here.html?bags-and-travel-deals" class="pageHead__navLink pageHead__navLink--nested">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__navIcon">
+                        <use href="/assets/images/icons/icon-sale.svg#icon"></use>
+                      </svg>
+                      Deals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--close">
+                    <button class="pageHead__navCloseButton" onclick="closeAllSubnavs()">
+                      <span class="visuallyHidden">
+                        Close
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <a class="pageHead__navLink pageHead__navLink--primary" href="nothing-here.html?trail-reviews">
+                  Trail Reviews
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="pageMain">
+      <div class="post__banner post__banner--blog">
+        <div class="post__bannerContent">
+          <div class="container">
+            <h1 class="post__bannerTitle">A cave or cavern is a natural void in the ground</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container pageMain__container post__container">
+        <aside class="pageMain__sidebar">
+          <div class="pageMain__sidebarCategory">
+            <img src="/assets/images/story-5.jpg" alt="" />
+            <div class="pageMain__sidebarContent">
+              <ul class="pageMain__sidebarTextNav">
+                <li class="pageMain__sidebarTextNavItem">
+                  <a href="nothing-here.html?new-arrivals" class="pageMain__sidebarTextNavLink">
+                    New Arrivals
+                  </a>
+                </li>
+                <li class="pageMain__sidebarTextNavItem">
+                  <a href="nothing-here.html?gadgets-and-gear" class="pageMain__sidebarTextNavLink">
+                    Gadgets &amp; Gear
+                  </a>
+                </li>
+                <li class="pageMain__sidebarTextNavItem">
+                  <a href="nothing-here.html?camp-and-hike-deals" class="pageMain__sidebarTextNavLink">
+                    Camp &amp; Hike Deals
+                  </a>
+                </li>
+                <li class="pageMain__sidebarTextNavItem">
+                  <a href="nothing-here.html?health-and-safety" class="pageMain__sidebarTextNavLink">
+                    Health &amp; Safety
+                  </a>
+                </li>
+              </ul>
+              <dl class="pageMain__sidebarIconNav">
+                <div class="pageMain__sidebarIconNavItem">
+                  <dt class="pageMain__sidebarIconNavTitle">
+                    <a href="nothing-here.html?expert-advice" class="pageMain__sidebarIconNavLink">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageMain__sidebarIconNavIcon">
+                        <use href="/assets/images/icons/icon-speech-bubble.svg#icon"></use>
+                      </svg>
+                      Expert Advice
+                    </a>
+                  </dt>
+                  <dd class="pageMain__sidebarIconNavNote">
+                    <a href="nothing-here.html?expert-advice" class="pageMain__sidebarIconNavLink">
+                      Checklists & how-tos
+                    </a>
+                  </dd>
+                </div>
+                <div class="pageMain__sidebarIconNavItem">
+                  <dt class="pageMain__sidebarIconNavTitle">
+                    <a href="nothing-here.html?classes" class="pageMain__sidebarIconNavLink">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageMain__sidebarIconNavIcon">
+                        <use href="/assets/images/icons/icon-school.svg#icon"></use>
+                      </svg>
+                      Classes
+                    </a>
+                  </dt>
+                  <dd class="pageMain__sidebarIconNavNote">
+                    <a href="nothing-here.html?classes" class="pageMain__sidebarIconNavLink">
+                      Expert-led instruction
+                    </a>
+                  </dd>
+                </div>
+                <div class="pageMain__sidebarIconNavItem">
+                  <dt class="pageMain__sidebarIconNavTitle">
+                    <a href="nothing-here.html?gear-rentals" class="pageMain__sidebarIconNavLink">
+                      <svg aria-hidden="true" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24" class="pageMain__sidebarIconNavIcon">
+                        <use href="/assets/images/icons/icon-tree.svg#icon"></use>
+                      </svg>
+                      Gear Rentals
+                    </a>
+                  </dt>
+                  <dd class="pageMain__sidebarIconNavNote">
+                    <a href="nothing-here.html?gear-rentals" class="pageMain__sidebarIconNavLink">
+                      Outdoor Equipment
+                    </a>
+                  </dd>
+                </div>
+                <div class="pageMain__sidebarIconNavItem">
+                  <dt class="pageMain__sidebarIconNavTitle">
+                    <a href="nothing-here.html?sizing-charts" class="pageMain__sidebarIconNavLink">
+                      <svg aria-hidden="true" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24" class="pageMain__sidebarIconNavIcon">
+                        <use href="/assets/images/icons/icon-ruler.svg#icon"></use>
+                      </svg>
+                      Sizing Charts
+                    </a>
+                  </dt>
+                  <dd class="pageMain__sidebarIconNavNote">
+                    <a href="nothing-here.html?sizing-charts" class="pageMain__sidebarIconNavLink">
+                      Find your fit
+                    </a>
+                  </dd>
+                </div>
+                <div class="pageMain__sidebarIconNavItem">
+                  <dt class="pageMain__sidebarIconNavTitle">
+                    <a href="nothing-here.html?clearance" class="pageMain__sidebarIconNavLink">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageMain__sidebarIconNavIcon">
+                        <use href="/assets/images/icons/icon-coin.svg#icon"></use>
+                      </svg>
+                      Clearance
+                    </a>
+                  </dt>
+                  <dd class="pageMain__sidebarIconNavNote">
+                    <a href="nothing-here.html?clearance" class="pageMain__sidebarIconNavLink">
+                      Shop all deals
+                    </a>
+                  </dd>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <div class="pageMain__content page__contentFormatted post__content">
+          <p>A cave or cavern is a natural void in the ground, specifically a space large enough for a human to enter. Caves often form by the weathering of rock and often extend deep underground. The word cave can also refer to much smaller openings such as sea caves, rock shelters, and grottos, though strictly speaking a cave is exogene, meaning it is deeper than its opening is wide, and a rock shelter is endogene.</p>
+          <p>Speleology is the science of exploration and study of all aspects of caves and the cave environment. Visiting or exploring caves for recreation may be called caving, potholing, or spelunking.</p>
+          <h2>Types and formation</h2>
+          <p>The formation and development of caves is known as speleogenesis; it can occur over the course of millions of years. Caves can range widely in size, and are formed by various geological processes. These may involve a combination of chemical processes, erosion by water, tectonic forces, microorganisms, pressure, and atmospheric influences. Isotopic dating techniques can be applied to cave sediments, to determine the timescale of the geological events which formed and shaped present-day caves.</p>
+          <p>It is estimated that a cave cannot be more than 3,000 metres (9,800 ft) vertically beneath the surface due to the pressure of overlying rocks. This does not, however, impose a maximum depth for a cave which is measured from its highest entrance to its lowest point, as the amount of rock above the lowest point is dependent on the topography of the landscape above it. For karst caves the maximum depth is determined on the basis of the lower limit of karst forming processes, coinciding with the base of the soluble carbonate rocks. Most caves are formed in limestone by dissolution.</p>
+          <p>Caves can be classified in various other ways as well, including a contrast between active and relict: active caves have water flowing through them; relict caves do not, though water may be retained in them. Types of active caves include inflow caves ("into which a stream sinks"), outflow caves ("from which a stream emerges"), and through caves ("traversed by a stream")</p>
+          <h3>Solutional cave</h3>
+          <p>Solutional caves or karst caves are the most frequently occurring caves. Such caves form in rock that is soluble; most occur in limestone, but they can also form in other rocks including chalk, dolomite, marble, salt, and gypsum. Rock is dissolved by natural acid in groundwater that seeps through bedding planes, faults, joints, and comparable features. Over time cracks enlarge to become caves and cave systems.</p>
+          <p>The largest and most abundant solutional caves are located in limestone. Limestone dissolves under the action of rainwater and groundwater charged with H2CO3 (carbonic acid) and naturally occurring organic acids. The dissolution process produces a distinctive landform known as karst, characterized by sinkholes and underground drainage. Limestone caves are often adorned with calcium carbonate formations produced through slow precipitation. These include flowstones, stalactites, stalagmites, helictites, soda straws and columns. These secondary mineral deposits in caves are called speleothems.</p>
+          <p>The portions of a solutional cave that are below the water table or the local level of the groundwater will be flooded.</p>
+          <p>Lechuguilla Cave in New Mexico and nearby Carlsbad Cavern are now believed to be examples of another type of solutional cave. They were formed by H2S (hydrogen sulfide) gas rising from below, where reservoirs of oil give off sulfurous fumes. This gas mixes with groundwater and forms H2SO4 (sulfuric acid). The acid then dissolves the limestone from below, rather than from above, by acidic water percolating from the surface.</p>
+          <h3>Primary cave</h3>
+          <p>Caves formed at the same time as the surrounding rock are called primary caves.</p>
+          <p>Lava tubes are formed through volcanic activity and are the most common primary caves. As lava flows downhill, its surface cools and solidifies. Hot liquid lava continues to flow under that crust, and if most of it flows out, a hollow tube remains. Such caves can be found in the Canary Islands, Jeju-do, the basaltic plains of Eastern Idaho, and in other places. Kazumura Cave near Hilo, Hawaii is a remarkably long and deep lava tube; it is 65.6 km long (40.8 mi).</p>
+          <p>Lava caves include but are not limited to lava tubes. Other caves formed through volcanic activity include rifts, lava molds, open vertical conduits, inflationary, blisters, among others.</p>
+          <h3>Sea cave or littoral cave</h3>
+          <p>Sea caves are found along coasts around the world. A special case is littoral caves, which are formed by wave action in zones of weakness in sea cliffs. Often these weaknesses are faults, but they may also be dykes or bedding-plane contacts. Some wave-cut caves are now above sea level because of later uplift. Elsewhere, in places such as Thailand's Phang Nga Bay, solutional caves have been flooded by the sea and are now subject to littoral erosion. Sea caves are generally around 5 to 50 metres (16 to 164 ft) in length, but may exceed 300 metres (980 ft).</p>
+          <h3>Corrasional cave or erosional cave</h3>
+          <p>Corrasional or erosional caves are those that form entirely by erosion by flowing streams carrying rocks and other sediments. These can form in any type of rock, including hard rocks such as granite. Generally there must be some zone of weakness to guide the water, such as a fault or joint. A subtype of the erosional cave is the wind or aeolian cave, carved by wind-born sediments. Many caves formed initially by solutional processes often undergo a subsequent phase of erosional or vadose enlargement where active streams or rivers pass through them.</p>
+          <h3>Glacier cave</h3>
+          <p>Glacier caves are formed by melting ice and flowing water within and under glaciers. The cavities are influenced by the very slow flow of the ice, which tends to collapse the caves again. Glacier caves are sometimes misidentified as "ice caves", though this latter term is properly reserved for bedrock caves that contain year-round ice formations.</p>
+          <h3>Fracture cave</h3>
+          <p>Fracture caves are formed when layers of more soluble minerals, such as gypsum, dissolve out from between layers of less soluble rock. These rocks fracture and collapse in blocks of stone.</p>
+          <h3>Talus cave</h3>
+          <p>Talus caves are formed by the openings among large boulders that have fallen down into a random heap, often at the bases of cliffs. These unstable deposits are called talus or scree, and may be subject to frequent rockfalls and landslides.</p>
+          <h3>Anchialine cave</h3>
+          <p>Anchialine caves are caves, usually coastal, containing a mixture of freshwater and saline water (usually sea water). They occur in many parts of the world, and often contain highly specialized and endemic fauna.</p>
+          <h2>Physical patterns</h2>
+          <p>Branchwork caves resemble surface dendritic stream patterns; they are made up of passages that join downstream as tributaries. Branchwork caves are the most common of cave patterns and are formed near sinkholes where groundwater recharge occurs. Each passage or branch is fed by a separate recharge source and converges into other higher order branches downstream.</p>
+          <p>Angular network caves form from intersecting fissures of carbonate rock that have had fractures widened by chemical erosion. These fractures form high, narrow, straight passages that persist in widespread closed loops.</p>
+          <p>Anastomotic caves largely resemble surface braided streams with their passages separating and then meeting further down drainage. They usually form along one bed or structure, and only rarely cross into upper or lower beds.</p>
+          <p>Spongework caves are formed when solution cavities are joined by mixing of chemically diverse water. The cavities form a pattern that is three-dimensional and random, resembling a sponge.</p>
+          <p>Ramiform caves form as irregular large rooms, galleries, and passages. These randomized three-dimensional rooms form from a rising water table that erodes the carbonate rock with hydrogen-sulfide enriched water.</p>
+          <p>Pit caves (vertical caves, potholes, or simply "pits") consist of a vertical shaft rather than a horizontal cave passage. They may or may not be associated with one of the above structural patterns.</p>
+          <h2>Geographic distribution</h2>
+          <p>Caves are found throughout the world, but only a small portion of them have been explored and documented by cavers. The distribution of documented cave systems is widely skewed toward countries where caving has been popular for many years (such as France, Italy, Australia, the UK, the United States, etc.). As a result, explored caves are found widely in Europe, Asia, North America and Oceania, but are sparse in South America, Africa, and Antarctica.</p>
+          <p>This is a rough generalization, as large expanses of North America and Asia contain no documented caves, whereas areas such as the Madagascar dry deciduous forests and parts of Brazil contain many documented caves. As the world's expanses of soluble bedrock are researched by cavers, the distribution of documented caves is likely to shift. For example, China, despite containing around half the world's exposed limestone—more than 1,000,000 square kilometres (390,000 sq mi)—has relatively few documented caves.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="pageMain__emailSignUp">
+          <h2 class="pageMain__emailSignUpTitle">
+            Stay in the Know
+          </h2>
+          <p class="pageMain__emailSignUpMessage">
+            Sign up for Carved Rock news, sales and deals.
+          </p>
+          <form class="pageMain__emailSignUpForm">
+            <label for="email" class="pageMain__emailSignUpLabel">
+              Email Address
+            </label>
+            <input type="email" id="email" maxlength="70" placeholder="Enter your email address" class="pageMain__emailSignUpField" />
+            <button type="submit" class="pageMain__emailSignUpButton">
+              Sign up!
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="pageFoot">
+      <div class="container pageFoot__container">
+        <dl class="pageFoot__iconNav">
+          <div class="pageFoot__iconNavItem">
+            <dt class="pageFoot__iconNavTitle">
+              <a href="nothing-here.html?best-price-guarantee" class="pageFoot__iconNavLink">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageFoot__iconNavIcon">
+                  <use href="/assets/images/icons/icon-money.svg#icon"></use>
+                </svg>
+                Best Price Guarantee
+              </a>
+            </dt>
+            <dd class="pageFoot__iconNavNote">
+              <a href="nothing-here.html?best-price-guarantee" class="pageFoot__iconNavLink">
+                If you find a lower price, we'll match it.
+              </a>
+            </dd>
+          </div>
+          <div class="pageFoot__iconNavItem">
+            <dt class="pageFoot__iconNavTitle">
+              <a href="nothing-here.html?gift-certificates" class="pageFoot__iconNavLink">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="pageFoot__iconNavIcon">
+                  <use href="/assets/images/icons/icon-gift-card.svg#icon"></use>
+                </svg>
+                Gift Certificates
+              </a>
+            </dt>
+            <dd class="pageFoot__iconNavNote">
+              <a href="nothing-here.html?gift-certificates" class="pageFoot__iconNavLink">
+                We offer both e-gift certificates and classic gift cards.
+              </a>
+            </dd>
+          </div>
+          <div class="pageFoot__iconNavItem">
+            <dt class="pageFoot__iconNavTitle">
+              <a href="nothing-here.html?get-free-shipping" class="pageFoot__iconNavLink">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="pageFoot__iconNavIcon">
+                  <use href="/assets/images/icons/icon-delivery.svg#icon"></use>
+                </svg>
+                Get Free Shipping
+              </a>
+            </dt>
+            <dd class="pageFoot__iconNavNote">
+              <a href="nothing-here.html?get-free-shipping" class="pageFoot__iconNavLink">
+                Online orders of $50 or more only. Exclusions Apply.
+              </a>
+            </dd>
+          </div>
+          <div class="pageFoot__iconNavItem">
+            <dt class="pageFoot__iconNavTitle">
+              <a href="nothing-here.html?need-help" class="pageFoot__iconNavLink">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageFoot__iconNavIcon">
+                  <use href="/assets/images/icons/icon-help.svg#icon"></use>
+                </svg>
+                Need Help?
+              </a>
+            </dt>
+            <dd class="pageFoot__iconNavNote">
+              <a href="nothing-here.html?need-help" class="pageFoot__iconNavLink">
+                Talk to our Gearheads 24/7 about your needs.
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <nav class="pageFoot__nav">
+          <div class="pageFoot__navSection">
+            <h2 class="pageFoot__navTitle">
+              Company
+            </h2>
+            <ul class="pageFoot__navItems">
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?about-us" class="pageFoot__navLink">
+                  About Us
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?careers" class="pageFoot__navLink">
+                  Careers
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?corporate-social-responsibility" class="pageFoot__navLink">
+                  Corporate Social Responsibility
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?press-room" class="pageFoot__navLink">
+                  Press Room
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?suppliers" class="pageFoot__navLink">
+                  Suppliers
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="pageFoot__navSection">
+            <h2 class="pageFoot__navTitle">
+              Services
+            </h2>
+            <ul class="pageFoot__navItems">
+              <li class="pageFoot__navItem">
+                <a href="account.html" class="pageFoot__navLink">
+                  My Account
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?rewards-and-benefits" class="pageFoot__navLink">
+                  Rewards &amp; Benefits
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?contact-customer-service" class="pageFoot__navLink">
+                  Contact Customer Service
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?track-your-order" class="pageFoot__navLink">
+                  Track Your Order
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?gift-cards" class="pageFoot__navLink">
+                  Gift Cards
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="pageFoot__navSection">
+            <h2 class="pageFoot__navTitle">
+              Shop
+            </h2>
+            <ul class="pageFoot__navItems">
+              <li class="pageFoot__navItem">
+                <a href="locations.html" class="pageFoot__navLink">
+                  Find a Store
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?store-services" class="pageFoot__navLink">
+                  Store Services
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?promos-and-coupons" class="pageFoot__navLink">
+                  Promos &amp; Coupons
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?rebates" class="pageFoot__navLink">
+                  Rebates
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?weekly-ad" class="pageFoot__navLink">
+                  Weekly Ad
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?top-brands" class="pageFoot__navLink">
+                  Top Brands
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="pageFoot__navSection">
+            <h2 class="pageFoot__navTitle">
+              Social
+            </h2>
+            <ul class="pageFoot__navIcons">
+              <li class="pageFoot__navIcon">
+                <a href="nothing-here.html?facebook" class="pageFoot__navLink">
+                  <svg aria-hidden="true" viewBox="0 0 34 34" class="pageFoot__navIconSymbol">
+                    <use href="/assets/images/icons/icon-facebook.svg#icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pageFoot__navIcon">
+                <a href="nothing-here.html?twitter" class="pageFoot__navLink">
+                  <svg aria-hidden="true" viewBox="0 0 34 34" class="pageFoot__navIconSymbol">
+                    <use href="/assets/images/icons/icon-twitter.svg#icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pageFoot__navIcon">
+                <a href="nothing-here.html?instagram" class="pageFoot__navLink">
+                  <svg aria-hidden="true" viewBox="0 0 34 34" class="pageFoot__navIconSymbol">
+                    <use href="/assets/images/icons/icon-instagram.svg#icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pageFoot__navIcon">
+                <a href="nothing-here.html?youtube" class="pageFoot__navLink">
+                  <svg aria-hidden="true" viewBox="0 0 34 34" class="pageFoot__navIconSymbol">
+                    <use href="/assets/images/icons/icon-youtube.svg#icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="pageFoot__pluralsight">
+          <img src="https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/logos/pluralsight-white.png" class="pageFoot__pluralsightLogo" />
+          <p class="pageFoot__pluralsightMessage">
+            This site is created for demonstrative purposes only and does not offer any real products or services.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/toggle-animation.js"></script>
+    <script src="/assets/js/page-head-nav.js"></script>
+  </body>
+</html>

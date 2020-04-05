@@ -1,0 +1,71 @@
+/*
+**
+** Post banner
+****************************************************************/
+.post__banner {
+  background-size: cover;
+  margin-bottom: 1em;
+}
+
+.post__bannerContent {
+  background: rgba(245, 132, 3, 0.75);
+  color: white;
+  text-align: center;
+}
+
+.post__bannerTitle {
+  font-size: 500%;
+  margin: 0;
+}
+
+/* Blog post */
+.post__banner--blog {
+  background: url(/assets/images/story-8.jpg) center center no-repeat;
+}
+
+.post__banner--blog .post__bannerContent {
+  padding: 10em 0;
+}
+
+/* Video post */
+.post__banner--video {
+  background: url(/assets/images/story-7.jpg) center center no-repeat;
+}
+
+.post__banner--video .post__bannerContent {
+  padding: 10em 0 7em;
+}
+
+.post__bannerVideo {
+  border-top: solid 1px white;
+  margin-top: 2em;
+  padding-top: 3em;
+}
+
+.post__bannerVideoContent {
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.post__bannerVideoContent iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*
+**
+** Post content
+****************************************************************/
+.post__container {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 0;
+}
+
+.post__content {
+  padding: 0 0 1.5em 1.5em;
+}

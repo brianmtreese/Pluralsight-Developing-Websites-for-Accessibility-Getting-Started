@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Locations | Carved Rock Fitness</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/locations.css" />
+  </head>
+  <body id="page-body" class="page__animation--enabled">
+    <button id="page-animation-toggle" class="page__toggleAnimation" onclick="toggleAnimation()">
+      Disable Animation
+    </button>
+    <header class="pageHead">
+      <div class="container pageHead__container">
+        <a href="/" class="pageHead__logo">
+          <img src="/assets/images/carved-rock-logo.png" alt="Carved Rock Fitness" />
+        </a>
+        <div class="pageHead__content">
+          <form role="search" class="pageHead__search">
+            <input type="search" placeholder="What can we help you find" maxlength="70" autocomplete="off" class="pageHead__searchField" />
+            <button class="pageHead__searchButton">
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__searchIcon">
+                <use href="/assets/images/icons/icon-search.svg#icon"></use>
+              </svg>
+              <span class="pageHead__searchLabel">Search</span>
+            </button>
+          </form>
+          <ul class="pageHead__utilities">
+            <li class="pageHead__utilitiesItem">
+              <a href="account.html" class="pageHead__utilitiesLink">
+                <span>Sign In</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__utilitiesIcon">
+                  <use href="/assets/images/icons/icon-sign-in.svg#icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="pageHead__utilitiesItem">
+              <a href="locations.html" class="pageHead__utilitiesLink">
+                <span>Locations</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__utilitiesIcon">
+                  <use href="/assets/images/icons/icon-locations.svg#icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="pageHead__utilitiesItem">
+              <a href="nothing-here.html?cart" class="pageHead__utilitiesLink">
+                <span>Cart</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__utilitiesIcon">
+                  <use href="/assets/images/icons/icon-cart.svg#icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <nav class="pageHead__nav">
+            <ul class="pageHead__navList pageHead__navList--primary">
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <button aria-controls="page-head-subnav-0" aria-expanded="false" class="pageHead__navLink pageHead__navLink--primary">
+                  Clothing
+                </button>
+                <ul id="page-head-subnav-0" class="pageHead__navList pageHead__navList--nested">
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?tops" class="pageHead__navLink pageHead__navLink--nested">
+                      Tops
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?bottoms" class="pageHead__navLink pageHead__navLink--nested">
+                      Bottoms
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?jackets" class="pageHead__navLink pageHead__navLink--nested">
+                      Jackets
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?swimwear" class="pageHead__navLink pageHead__navLink--nested">
+                      Swimwear
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?underwear" class="pageHead__navLink pageHead__navLink--nested">
+                      Underwear
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?big-tall-and-short" class="pageHead__navLink pageHead__navLink--nested">
+                      Big, Tall &amp; Short
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--deals">
+                    <a href="nothing-here.html?clothing-deals" class="pageHead__navLink pageHead__navLink--nested">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__navIcon">
+                        <use href="/assets/images/icons/icon-sale.svg#icon"></use>
+                      </svg>
+                      Deals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--close">
+                    <button class="pageHead__navCloseButton" onclick="closeAllSubnavs()">
+                      <span class="visuallyHidden">
+                        Close
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <button aria-controls="page-head-subnav-1" aria-expanded="false" class="pageHead__navLink pageHead__navLink--primary">
+                  Footwear
+                </button>
+                <ul id="page-head-subnav-1" class="pageHead__navList pageHead__navList--nested">
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?boots" class="pageHead__navLink pageHead__navLink--nested">
+                      Boots
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?shoes" class="pageHead__navLink pageHead__navLink--nested">
+                      Shoes
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?sandals" class="pageHead__navLink pageHead__navLink--nested">
+                      Sandals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?slippers" class="pageHead__navLink pageHead__navLink--nested">
+                      Slippers
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?insoles" class="pageHead__navLink pageHead__navLink--nested">
+                      Insoles
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?socks" class="pageHead__navLink pageHead__navLink--nested">
+                      Socks
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--deals">
+                    <a href="nothing-here.html?footwear-deals" class="pageHead__navLink pageHead__navLink--nested">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__navIcon">
+                        <use href="/assets/images/icons/icon-sale.svg#icon"></use>
+                      </svg>
+                      Deals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--close">
+                    <button class="pageHead__navCloseButton" onclick="closeAllSubnavs()">
+                      <span class="visuallyHidden">
+                        Close
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <button aria-controls="page-head-subnav-2" aria-expanded="false" class="pageHead__navLink pageHead__navLink--primary">
+                  Equipment
+                </button>
+                <ul id="page-head-subnav-2" class="pageHead__navList pageHead__navList--nested">
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="product-details.html" class="pageHead__navLink pageHead__navLink--nested">
+                      Backpacks
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?tents" class="pageHead__navLink pageHead__navLink--nested">
+                      Tents
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?sleeping-bags" class="pageHead__navLink pageHead__navLink--nested">
+                      Sleeping Bags
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?pads-and-hammocks" class="pageHead__navLink pageHead__navLink--nested">
+                      Pads &amp; Hammocks
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?camp-kitchen" class="pageHead__navLink pageHead__navLink--nested">
+                      Camp Kitchen
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?camp-furniture" class="pageHead__navLink pageHead__navLink--nested">
+                      Camp Furniture
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?water" class="pageHead__navLink pageHead__navLink--nested">
+                      Water
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--deals">
+                    <a href="nothing-here.html?equipment-deals" class="pageHead__navLink pageHead__navLink--nested">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__navIcon">
+                        <use href="/assets/images/icons/icon-sale.svg#icon"></use>
+                      </svg>
+                      Deals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--close">
+                    <button class="pageHead__navCloseButton" onclick="closeAllSubnavs()">
+                      <span class="visuallyHidden">
+                        Close
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <button aria-controls="page-head-subnav-3" aria-expanded="false" class="pageHead__navLink pageHead__navLink--primary">
+                  Bags &amp; Travel
+                </button>
+                <ul id="page-head-subnav-3" class="pageHead__navList pageHead__navList--nested">
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="product-details.html" class="pageHead__navLink pageHead__navLink--nested">
+                      Backpacks
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?day-packs" class="pageHead__navLink pageHead__navLink--nested">
+                      Day Packs
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?hydration-packs" class="pageHead__navLink pageHead__navLink--nested">
+                      Hydration Packs
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?bay-carrier-packs" class="pageHead__navLink pageHead__navLink--nested">
+                      Bay Carrier Packs
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested">
+                    <a href="nothing-here.html?waist-packs" class="pageHead__navLink pageHead__navLink--nested">
+                      Waist Packs
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--deals">
+                    <a href="nothing-here.html?bags-and-travel-deals" class="pageHead__navLink pageHead__navLink--nested">
+                      <svg aria-hidden="true" viewBox="0 0 24 24" class="pageHead__navIcon">
+                        <use href="/assets/images/icons/icon-sale.svg#icon"></use>
+                      </svg>
+                      Deals
+                    </a>
+                  </li>
+                  <li class="pageHead__navItem pageHead__navItem--nested pageHead__navItem--close">
+                    <button class="pageHead__navCloseButton" onclick="closeAllSubnavs()">
+                      <span class="visuallyHidden">
+                        Close
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <li class="pageHead__navItem pageHead__navItem--primary">
+                <a class="pageHead__navLink pageHead__navLink--primary" href="nothing-here.html?trail-reviews">
+                  Trail Reviews
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="pageMain">
+      <div class="container pageMain__container">
+        <div class="pageMain__content">
+          <h1 class="page__title">Carved Rock Fitness Locations</h1>
+          <div class="locations">
+            <div class="locations__info">
+              <h2>Your Store</h2>
+              <div class="locations__details">
+                <h3 class="locations__header">Address</h3>
+                <ul class="locations__list">
+                  <li class="locations__item locations__item--address">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" class="location__Icon">
+                      <use href="/assets/images/icons/icon-locations.svg#icon"></use>
+                    </svg>
+                    <address>
+                      <div>3456 Market Ave.</div>
+                      <div>Los Angeles, CA 94560</div>
+                    </address>
+                  </li>
+                  <li class="locations__item">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" class="location__Icon">
+                      <use href="/assets/images/icons/icon-phone.svg#icon"></use>
+                    </svg>
+                    <a href="tel:1-310-456-5823">(310) 456-5823</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="locations__details">
+                <h3 class="locations__header">Hours</h3>
+                <dl class="locations__hours">
+                  <dt class="locations__day">Sunday</dt>
+                  <dd class="locations__time">11:00am - 9:00pm</dd>
+                  <dt class="locations__day">Monday</dt>
+                  <dd class="locations__time">10:00am - 9:00pm</dd>
+                  <dt class="locations__day">Tuesday</dt>
+                  <dd class="locations__time">10:00am - 9:00pm</dd>
+                  <dt class="locations__day">Wednesday</dt>
+                  <dd class="locations__time">10:00am - 9:00pm</dd> 
+                  <dt class="locations__day">Thursday</dt>
+                  <dd class="locations__time">10:00am - 9:00pm</dd>
+                  <dt class="locations__day">Friday</dt>
+                  <dd class="locations__time">10:00am - 10:00pm</dd>
+                  <dt class="locations__day">Saturday</dt>
+                  <dd class="locations__time">10:00am - 10:00pm</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="locations__map">
+              <!-- <img src="assets/images/maps/map-01.svg" /> -->
+              <!-- <img src="assets/images/maps/map-02.svg" /> -->
+              <img src="assets/images/maps/map-03.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="pageMain__emailSignUp">
+          <h2 class="pageMain__emailSignUpTitle">
+            Stay in the Know
+          </h2>
+          <p class="pageMain__emailSignUpMessage">
+            Sign up for Carved Rock news, sales and deals.
+          </p>
+          <form class="pageMain__emailSignUpForm">
+            <label for="email" class="pageMain__emailSignUpLabel">
+              Email Address
+            </label>
+            <input type="email" id="email" maxlength="70" placeholder="Enter your email address" class="pageMain__emailSignUpField" />
+            <button type="submit" class="pageMain__emailSignUpButton">
+              Sign up!
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="pageFoot">
+      <div class="container pageFoot__container">
+        <dl class="pageFoot__iconNav">
+          <div class="pageFoot__iconNavItem">
+            <dt class="pageFoot__iconNavTitle">
+              <a href="nothing-here.html?best-price-guarantee" class="pageFoot__iconNavLink">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageFoot__iconNavIcon">
+                  <use href="/assets/images/icons/icon-money.svg#icon"></use>
+                </svg>
+                Best Price Guarantee
+              </a>
+            </dt>
+            <dd class="pageFoot__iconNavNote">
+              <a href="nothing-here.html?best-price-guarantee" class="pageFoot__iconNavLink">
+                If you find a lower price, we'll match it.
+              </a>
+            </dd>
+          </div>
+          <div class="pageFoot__iconNavItem">
+            <dt class="pageFoot__iconNavTitle">
+              <a href="nothing-here.html?gift-certificates" class="pageFoot__iconNavLink">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="pageFoot__iconNavIcon">
+                  <use href="/assets/images/icons/icon-gift-card.svg#icon"></use>
+                </svg>
+                Gift Certificates
+              </a>
+            </dt>
+            <dd class="pageFoot__iconNavNote">
+              <a href="nothing-here.html?gift-certificates" class="pageFoot__iconNavLink">
+                We offer both e-gift certificates and classic gift cards.
+              </a>
+            </dd>
+          </div>
+          <div class="pageFoot__iconNavItem">
+            <dt class="pageFoot__iconNavTitle">
+              <a href="nothing-here.html?get-free-shipping" class="pageFoot__iconNavLink">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" class="pageFoot__iconNavIcon">
+                  <use href="/assets/images/icons/icon-delivery.svg#icon"></use>
+                </svg>
+                Get Free Shipping
+              </a>
+            </dt>
+            <dd class="pageFoot__iconNavNote">
+              <a href="nothing-here.html?get-free-shipping" class="pageFoot__iconNavLink">
+                Online orders of $50 or more only. Exclusions Apply.
+              </a>
+            </dd>
+          </div>
+          <div class="pageFoot__iconNavItem">
+            <dt class="pageFoot__iconNavTitle">
+              <a href="nothing-here.html?need-help" class="pageFoot__iconNavLink">
+                <svg aria-hidden="true" viewBox="0 0 24 24" class="pageFoot__iconNavIcon">
+                  <use href="/assets/images/icons/icon-help.svg#icon"></use>
+                </svg>
+                Need Help?
+              </a>
+            </dt>
+            <dd class="pageFoot__iconNavNote">
+              <a href="nothing-here.html?need-help" class="pageFoot__iconNavLink">
+                Talk to our Gearheads 24/7 about your needs.
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <nav class="pageFoot__nav">
+          <div class="pageFoot__navSection">
+            <h2 class="pageFoot__navTitle">
+              Company
+            </h2>
+            <ul class="pageFoot__navItems">
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?about-us" class="pageFoot__navLink">
+                  About Us
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?careers" class="pageFoot__navLink">
+                  Careers
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?corporate-social-responsibility" class="pageFoot__navLink">
+                  Corporate Social Responsibility
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?press-room" class="pageFoot__navLink">
+                  Press Room
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?suppliers" class="pageFoot__navLink">
+                  Suppliers
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="pageFoot__navSection">
+            <h2 class="pageFoot__navTitle">
+              Services
+            </h2>
+            <ul class="pageFoot__navItems">
+              <li class="pageFoot__navItem">
+                <a href="account.html" class="pageFoot__navLink">
+                  My Account
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?rewards-and-benefits" class="pageFoot__navLink">
+                  Rewards &amp; Benefits
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?contact-customer-service" class="pageFoot__navLink">
+                  Contact Customer Service
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?track-your-order" class="pageFoot__navLink">
+                  Track Your Order
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?gift-cards" class="pageFoot__navLink">
+                  Gift Cards
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="pageFoot__navSection">
+            <h2 class="pageFoot__navTitle">
+              Shop
+            </h2>
+            <ul class="pageFoot__navItems">
+              <li class="pageFoot__navItem">
+                <a href="locations.html" class="pageFoot__navLink">
+                  Find a Store
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?store-services" class="pageFoot__navLink">
+                  Store Services
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?promos-and-coupons" class="pageFoot__navLink">
+                  Promos &amp; Coupons
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?rebates" class="pageFoot__navLink">
+                  Rebates
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?weekly-ad" class="pageFoot__navLink">
+                  Weekly Ad
+                </a>
+              </li>
+              <li class="pageFoot__navItem">
+                <a href="nothing-here.html?top-brands" class="pageFoot__navLink">
+                  Top Brands
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="pageFoot__navSection">
+            <h2 class="pageFoot__navTitle">
+              Social
+            </h2>
+            <ul class="pageFoot__navIcons">
+              <li class="pageFoot__navIcon">
+                <a href="nothing-here.html?facebook" class="pageFoot__navLink">
+                  <svg aria-hidden="true" viewBox="0 0 34 34" class="pageFoot__navIconSymbol">
+                    <use href="/assets/images/icons/icon-facebook.svg#icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pageFoot__navIcon">
+                <a href="nothing-here.html?twitter" class="pageFoot__navLink">
+                  <svg aria-hidden="true" viewBox="0 0 34 34" class="pageFoot__navIconSymbol">
+                    <use href="/assets/images/icons/icon-twitter.svg#icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pageFoot__navIcon">
+                <a href="nothing-here.html?instagram" class="pageFoot__navLink">
+                  <svg aria-hidden="true" viewBox="0 0 34 34" class="pageFoot__navIconSymbol">
+                    <use href="/assets/images/icons/icon-instagram.svg#icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pageFoot__navIcon">
+                <a href="nothing-here.html?youtube" class="pageFoot__navLink">
+                  <svg aria-hidden="true" viewBox="0 0 34 34" class="pageFoot__navIconSymbol">
+                    <use href="/assets/images/icons/icon-youtube.svg#icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="pageFoot__pluralsight">
+          <img src="https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/logos/pluralsight-white.png" class="pageFoot__pluralsightLogo" />
+          <p class="pageFoot__pluralsightMessage">
+            This site is created for demonstrative purposes only and does not offer any real products or services.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/toggle-animation.js"></script>
+    <script src="/assets/js/page-head-nav.js"></script>
+  </body>
+</html>

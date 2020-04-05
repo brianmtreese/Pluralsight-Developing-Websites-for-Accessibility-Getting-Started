@@ -1,0 +1,745 @@
+@import "reset.css";
+
+/*
+**
+** Generics
+*****************************************************************/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  --pageLinkColor: #f58403;
+  /* --pageHeadFootColor: #333; */
+  --pageHeadFootColor: #888;
+  --pageHeadFootSeparatorColor: rgba(136, 136, 136, 0.9);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.visuallyHidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px !important;
+  overflow: hidden;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+/* Page */
+.page__title {
+  font-size: 300%;
+  margin: 0.75em 0 0.5em;
+}
+
+.page__note {
+  background: #eee;
+  font-size: 120%;
+  margin-bottom: 1em;
+  padding: 0.75em 1.5em 0.9em;
+}
+
+.page__contentFormatted p {
+  font-size: 120%;
+  line-height: 1.75;
+  margin-bottom: 1em;
+}
+
+.page__contentFormatted h1 {
+  font-size: 300%;
+  margin: 0.75em 0 0.375em;
+}
+
+.page__contentFormatted h2 {
+  font-size: 225%;
+  margin: 0.75em 0 0.375em;
+}
+
+.page__contentFormatted h3 {
+  font-size: 170%;
+  margin: 0.75em 0 0.375em;
+}
+
+/*
+**
+** Forms
+*****************************************************************/
+label {
+  font-size: 80%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+input[type="password"] {
+  border: solid 1px #ccc;
+  padding: 0.25em 0;
+  text-indent: 0.5em;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="search"]::placeholder {
+  color: #999;
+  font-style: italic;
+  overflow: visible;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="search"]:focus::placeholder {
+  opacity: 0;
+}
+
+button {
+  background: black;
+  border: 0;
+  color: white;
+  padding: 0 1em;
+}
+
+/*
+**
+** Page animation
+*****************************************************************/
+.page__toggleAnimation {
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  border: solid 1px white;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  color: var(--pageHeadFootColor);
+  font-size: 70%;
+  padding: 1.5em 0 1.25em;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6.5em;
+  z-index: 1000000;
+}
+
+.page__toggleAnimation::before,
+.page__toggleAnimation::after {
+  content: "";
+  display: block;
+}
+
+.page__toggleAnimation::before {
+  background: currentColor;
+  border-radius: 0.75em;
+  height: 1.5em;
+  margin: 0 1.25em 1em;
+  opacity: 0.5;
+}
+
+.page__toggleAnimation::after {
+  background: currentColor;
+  border-radius: 50%;
+  height: 2em;
+  left: 0.75em;
+  position: absolute;
+  right: auto;
+  top: 1.25em;
+  width: 2em;
+}
+
+.page__animation--enabled .page__toggleAnimation::before {
+  background: rgb(245, 132, 3);
+}
+
+.page__animation--enabled .page__toggleAnimation::after {
+  background: rgb(245, 132, 3);
+  left: auto;
+  right: 0.75em;
+}
+
+/*
+**
+** Page header
+*****************************************************************/
+.pageHead {
+  background: black;
+  color: var(--pageHeadFootColor);
+  padding: 0.75em 0 0;
+  --pageHeadBoxBackgroundColor: #222;
+  /* --pageHeadBoxForegroundColor: #555; */
+  --pageHeadBoxForegroundColor: #888;
+}
+
+.pageHead a,
+.pageHead button {
+  color: currentColor;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pageHead__container {
+  display: flex;
+}
+
+.pageHead__logo {
+  opacity: 0.4;
+  width: 10em;
+}
+
+.pageHead__content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1.5em;
+  width: 100%;
+}
+
+/*
+**
+** Page header search form
+*****************************************************************/
+.pageHead__search {
+  display: flex;
+}
+
+input[type="search"].pageHead__searchField {
+  appearance: none;
+  background-color: var(--pageHeadBoxBackgroundColor);
+  border: 0;
+  color: var(--pageHeadBoxForegroundColor);
+  font-size: 90%;
+  position: relative;
+  width: 13.5em;
+}
+
+input[type="search"].pageHead__searchField::placeholder {
+  color: #444;
+}
+
+.pageHead__searchButton {
+  align-items: center;
+  background-color: var(--pageHeadBoxBackgroundColor);
+  border: 0;
+  color: var(--pageHeadBoxForegroundColor);
+  display: flex;
+  font-size: 80%;
+  margin-left: 2px;
+  padding: 0 1em;
+}
+
+.pageHead__searchIcon {
+  fill: currentColor;
+  margin-right: 0.375em;
+  width: 1em;
+}
+
+/*
+**
+** Page header utilities
+*****************************************************************/
+.pageHead__utilities {
+  display: flex;
+  font-size: 80%;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.pageHead__utilitiesLink {
+  display: inline-flex;
+  margin-left: 1.25em;
+}
+
+.pageHead__utilitiesIcon {
+  fill: currentColor;
+  margin-left: 0.375em;
+  width: 1.25em;
+}
+
+/*
+**
+** Page header navigation
+*****************************************************************/
+.pageHead__nav {
+  margin-top: 0.75em;
+  position: relative;
+  width: 100%;
+}
+
+.pageHead__nav::before {
+  background-color: var(--pageHeadFootSeparatorColor);
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pageHead__navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Primary */
+.pageHead__navList--primary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pageHead__navItem--primary {
+  position: relative;
+  padding: 0.75em 0;
+}
+
+/* Secondary */
+.pageHead__navList--nested {
+  background-color: var(--pageHeadBoxBackgroundColor);
+  color: var(--pageHeadBoxForegroundColor);
+  top: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-left: -1.5em;
+  opacity: 0;
+  padding: 1em 1.5em 1.5em;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 2em top;
+}
+
+.pageHead__navList--nested::before {
+  border-left: solid 0.75em transparent;
+  border-right: solid 0.75em transparent;
+  border-bottom: solid 0.75em var(--pageHeadBoxBackgroundColor);
+  content: "";
+  display: block;
+  height: 0;
+  left: 1em;
+  position: absolute;
+  transform: translateY(-100%);
+  width: 0;
+}
+
+.pageHead__navList--nested a {
+  color: var(--pageHeadBoxForegroundColor);
+}
+
+.pageHead__navList--open .pageHead__navList--nested {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.page__animation--enabled .pageHead__navList--open .pageHead__navList--nested {
+  /* animation: mainNavAnimationOpen 1s; */
+  animation: mainNavAnimationOpen 0.25s;
+}
+
+.page__animation--transitioning .pageHead__navList--open .pageHead__navList--nested {
+  animation: none;
+}
+
+@keyframes mainNavAnimationOpen {
+  /* 0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(1);
+  } */
+
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page__animation--enabled .pageHead__navList--close .pageHead__navList--nested {
+  /* animation: mainNavAnimationClose 1s; */
+  animation: mainNavAnimationClose 0.5s;
+}
+
+.page__animation--transitioning .pageHead__navList--close .pageHead__navList--nested {
+  animation: none;
+}
+
+@keyframes mainNavAnimationClose {
+  /* 0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(3);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(0);
+  } */
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.pageHead__navItem--nested {
+  grid-column: 1;
+}
+
+/* Details link */
+.pageHead__navItem--deals {
+  border-left: dotted 1px currentColor;
+  grid-column: 2;
+  grid-row: 1 / 1000;
+  margin-left: 4em;
+  padding: 0 0 0 1em;
+  text-align: center;
+}
+
+.pageHead__navIcon {
+  fill: currentColor;
+  width: 1.5em;
+}
+
+/* Close button */
+.pageHead__navCloseButton {
+  background-color: transparent;
+  border: 0;
+  bottom: 0.5em;
+  color: currentColor;
+  height: 1em;
+  position: absolute;
+  right: 0.5em;
+  width: 1em;
+}
+
+.pageHead__navCloseButton::before,
+.pageHead__navCloseButton::after {
+  content: "";
+  background-color: currentColor;
+  display: block;
+  height: 1em;
+  width: 1px;
+  position: absolute;
+  top: 0;
+}
+
+.pageHead__navCloseButton::before {
+  transform: rotate(45deg);
+}
+
+.pageHead__navCloseButton::after {
+  transform: rotate(-45deg);
+}
+
+/*
+**
+** Page main
+*****************************************************************/
+.pageMain__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.pageMain__content {
+  flex: 1;
+  margin-left: 1em;
+}
+
+/*
+**
+** Page main sidebar
+*****************************************************************/
+.pageMain__sidebar {
+  border-right: solid 1px #ddd;
+  width: calc(25% - 0.75em);
+}
+
+/* Text nav */
+.pageMain__sidebarTextNav {
+  border-bottom: solid 1px #ddd;
+  font-weight: bold;
+  line-height: 1.75;
+  list-style: none;
+  margin: 0;
+  padding: 0.75em 0 1em;
+}
+
+.pageMain__sidebarTextNavLink {
+  color: var(--pageLinkColor);
+  text-decoration: none;
+}
+
+/* Icon nav */
+.pageMain__sidebarIconNav {
+  overflow: hidden;
+  padding: 0 1em 0 0;
+  --pageMainSidebarIcon: 2rem;
+  --pageMainSidebarIconSpacing: 0.75rem;
+}
+
+.pageMain__sidebarIconNavItem {
+  margin: 1em 0;
+  padding-left: calc(var(--pageMainSidebarIconSpacing) + var(--pageMainSidebarIcon));
+  position: relative;
+}
+
+.pageMain__sidebarIconNavLink {
+  color: var(--pageLinkColor);
+  text-decoration: none;
+}
+
+.pageMain__sidebarIconNavTitle {
+  font-weight: bold;
+}
+
+.pageMain__sidebarIconNavIcon {
+  fill: currentColor;
+  left: 0;
+  position: absolute;
+  top: 0.25em;
+  width: var(--pageMainSidebarIcon);
+}
+
+.pageMain__sidebarIconNavNote {
+  font-size: 80%;
+}
+
+/*
+**
+** Page main email sign up
+*****************************************************************/
+.pageMain__emailSignUp {
+  text-align: center;
+}
+
+.pageMain__emailSignUpTitle {
+  font-size: 180%;
+  margin: 1.75em 0 0.25em;
+  padding: 0;
+}
+
+.pageMain__emailSignUpForm {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5em auto 3em;
+  width: 30em;
+}
+
+.pageMain__emailSignUpLabel {
+  text-align: left;
+  width: 100%;
+}
+
+.pageMain__emailSignUpField {
+  flex: 1;
+}
+
+.pageMain__emailSignUpButton {
+  margin-left: 0.5em;
+}
+
+/*
+**
+** Page footer
+*****************************************************************/
+.pageFoot {
+  background: black;
+  color: var(--pageHeadFootColor);
+  padding: 1em 0;
+}
+
+/*
+**
+** Page footer icon nav
+*****************************************************************/
+.pageFoot__iconNav {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0;
+  --pageFootIcon: 2rem;
+  --pageFootIconSpacing: 0.75rem;
+}
+
+.pageFoot__iconNavItem {
+  margin: 1em 0 2em;
+  padding-left: calc(var(--pageFootIconSpacing) + var(--pageFootIcon));
+  padding-right: 1.5rem;
+  position: relative;
+  width: calc(25% - 0.75rem);
+}
+
+.pageFoot__iconNavItem::before {
+  background-color: var(--pageHeadFootSeparatorColor);
+  bottom: 0;
+  content: "";
+  display: block;
+  left: -1rem;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.pageFoot__iconNavItem:first-of-type::before {
+  display: none;
+}
+
+.pageFoot__iconNavLink {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.pageFoot__iconNavTitle {
+  font-weight: bold;
+}
+
+.pageFoot__iconNavIcon {
+  fill: currentColor;
+  left: 0;
+  position: absolute;
+  top: 0.25em;
+  width: var(--pageFootIcon);
+}
+
+.pageFoot__iconNavNote {
+  font-size: 80%;
+}
+
+/*
+**
+** Page footer icon nav
+*****************************************************************/
+.pageFoot__nav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  position: relative;
+}
+
+.pageFoot__nav::before {
+  background-color: var(--pageHeadFootSeparatorColor);
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pageFoot__navSection {
+  padding-right: 1.5rem;
+  position: relative;
+  width: calc(25% - 0.75rem);
+}
+
+.pageFoot__navSection::before {
+  background-color: var(--pageHeadFootSeparatorColor);
+  bottom: 0;
+  content: "";
+  display: block;
+  left: -1rem;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.pageFoot__navSection:first-of-type::before {
+  display: none;
+}
+
+.pageFoot__navTitle {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.pageFoot__navItems {
+  font-size: 80%;
+  list-style: none;
+  margin: 0.75em 0 0;
+  padding: 0;
+}
+
+.pageFoot__navItem {
+  padding: 0.25em 0;
+}
+
+.pageFoot__navLink {
+  color: currentColor;
+  text-decoration: none;
+}
+
+/* Icons */
+.pageFoot__navIcons {
+  display: flex;
+  list-style: none;
+  margin: 0.75em 0 0;
+  padding: 0;
+}
+
+.pageFoot__navIcon {
+  margin-right: 1em;
+  width: 2.25em;
+}
+
+/*
+**
+** Page footer Pluralsight
+*****************************************************************/
+.pageFoot__pluralsight {
+  position: relative;
+  text-align: center;
+}
+
+.pageFoot__pluralsight::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 0 0 2em;
+  background: linear-gradient(to right, #f05a28 0, #e80a89 100%);
+}
+
+.pageFoot__pluralsightLogo {
+  margin: 0 auto;
+  width: 20em;
+}
+
+.pageFoot__pluralsightMessage {
+  font-size: 80%;
+  margin: 0;
+  padding: 1.5em 0 3em;
+}

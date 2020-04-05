@@ -1,0 +1,142 @@
+/*
+**
+** Account
+*****************************************************************/
+.account__container {
+  border-bottom: solid 1px #ddd;
+  padding-bottom: 0;
+}
+
+.account__content {
+  padding: 0 0 3em 1.5em;
+}
+
+.account__form {
+  padding-top: 1em;
+}
+
+.account__button {
+  font-size: 115%;
+  padding: 0.75em 1.5em;
+}
+
+/*
+**
+** Account group
+*****************************************************************/
+.account__group {
+  border: none;
+  display: flex;
+  margin-bottom: 2em;
+  padding: 0;
+}
+
+.account__groupTitle {
+  border-bottom: solid 1px #ddd;
+  font-size: 170%;
+  font-weight: bold;
+  margin-bottom: 0.75em;
+  padding: 0 0 0.25em;
+  width: 100%;
+}
+
+/*
+**
+** Account item
+*****************************************************************/
+.account__item {
+  display: flex;
+  margin-bottom: 1.25em;
+}
+
+.account__itemContent {
+  position: relative;
+}
+
+.account__label {
+  display: block;
+  font-size: 100%;
+  margin-bottom: 0.375em;
+}
+
+.account__required {
+  color: red;
+  font-size: 125%;
+}
+
+.account__textbox {
+  width: 100%;
+}
+
+.account__itemNote {
+  background: #eee;
+  display: block;
+  font-size: 80%;
+  padding: 1em;
+}
+
+.account__itemContent--phone,
+.account__itemContent--postalCode {
+  width: 25%;
+}
+
+.account__itemContent--firstName,
+.account__itemContent--lastName,
+.account__itemContent--city,
+.account__itemContent--state,
+.account__itemContent--country,
+.account__itemContent--email,
+.account__itemContent--password {
+  width: 50%;
+}
+
+.account__itemContent--street {
+  width: 75%;
+}
+
+/*
+**
+** Account item
+*****************************************************************/
+.account__validation {
+  display: block;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  top: 2em;
+  transform: translateX(calc(100% + 1em));
+}
+
+.account__validationIcon {
+  fill: currentColor;
+  width: 2em;
+}
+
+.account__validationMessage {
+  display: block;
+  line-height: 1;
+}
+
+/* Error */
+.account__validation--invalid {
+  display: none;
+  color: red;
+}
+
+.account__item--invalid .account__validation--invalid {
+  display: block;
+}
+
+/* Valid */
+.account__validation--valid {
+  display: none;
+  color: green;
+}
+
+.account__item--valid .account__validation--valid {
+  display: block;
+}
+
+.account__validation--valid .account__validationMessage {
+  padding-left: 0.25em;
+}

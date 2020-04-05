@@ -1,0 +1,536 @@
+/*
+**
+** Home banner
+****************************************************************/
+.home__banner {
+  background: url(/assets/images/hero.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.home__bannerContent {
+  background: rgba(245, 132, 3, 0.75);
+  color: white;
+  padding: 3.25em 0 3em;
+  text-align: center;
+}
+
+.home__bannerBrand {
+  border-bottom: solid 1px white;
+  display: block;
+  font-size: 30%;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.home__bannerTitle {
+  font-size: 450%;
+  margin: 0;
+}
+
+.home__bannerSubtitle {
+  display: block;
+  font-size: 80%;
+}
+
+.home__bannerMessage {
+  font-size: 150%;
+  margin-bottom: 1em;
+}
+
+.home__bannerButton {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+}
+
+/*
+**
+** Page ad block
+****************************************************************/
+.home__adBlock {
+  background: #eee;
+  padding: 1.75em 0 3em;
+}
+
+.home__adBlockContainer {
+  align-items: center;
+  display: flex;
+}
+
+.home__adBlockContent {
+  flex: 1;
+  order: 1;
+  text-align: center;
+}
+
+.home__adBlockTitle {
+  font-size: 180%;
+  line-height: 1.1;
+}
+
+.home__adBlockNote {
+  font-size: 65%;
+  margin-bottom: 1.25em;
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+
+.home__adBlockButton {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+}
+
+.home__adBlockImage {
+  flex: 1;
+  max-width: 20em;
+  width: 25%;
+}
+
+.home__adBlockImage:first-of-type {
+  order: 0;
+}
+
+.home__adBlockImage:last-of-type {
+  order: 2;
+}
+
+/* Fly in ad */
+.home__adBlockFlyin {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.home__adBlockFlyin--open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.page__animation--enabled .home__adBlockFlyin--open {
+  /* animation: home__bannerFlyInAnimationOpen 0.65s linear both; */
+  animation: home__bannerFlyInAnimationOpen 0.25s;
+}
+
+.page__animation--transitioning .home__adBlockFlyin--open {
+  animation: none;
+}
+
+@keyframes home__bannerFlyInAnimationOpen {
+  /* 0% {
+    transform: scale(1) rotateZ(0);
+  }
+
+  20% {
+    transform: scale(1.5) rotateZ(180deg);
+  }
+
+  40% {
+    transform: scale(2) rotateZ(360deg);
+  }
+
+  60% {
+    transform: scale(1.5) rotateZ(540deg);
+  }
+
+  80% {
+    transform: scale(1) rotateZ(720deg);
+  }
+
+  87% {
+    transform: scale(2) rotateZ(720deg);
+  }
+
+  94% {
+    transform: scale(0.5) rotateZ(720deg);
+  }
+
+  100% {
+    transform: scale(1) rotateZ(720deg);
+  } */
+
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.home__adBlockFlyin--close {
+  opacity: 0;
+}
+
+.page__animation--enabled .home__adBlockFlyin--close {
+  /* animation: home__bannerFlyInAnimationClose 0.65s linear both; */
+  animation: home__bannerFlyInAnimationClose 0.25s;
+}
+
+.page__animation--transitioning .home__adBlockFlyin--close {
+  animation: none;
+}
+
+@keyframes home__bannerFlyInAnimationClose {
+  /* 0% {
+    opacity: 1;
+    transform: scale(1) rotateZ(360deg);
+  }
+
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1) rotateZ(0);
+  } */
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.home__adBlockFlyinContent {
+  background: #eee;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.75);
+  padding: 2em;
+  position: relative;
+  width: 70%;
+}
+
+.home__adBlockFlyinContent::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.page__animation--enabled .home__adBlockFlyinContent::before {
+  /* animation: home__adBlockFlyinContentAnimation 1.5s infinite; */
+  animation: home__adBlockFlyinContentAnimation 6s infinite;
+}
+
+.page__animation--transitioning .home__adBlockFlyinContent::before {
+  animation: none;
+}
+
+@keyframes home__adBlockFlyinContentAnimation {
+  /* 0% {
+    background: transparent;
+  }
+
+  5% {
+    background: red;
+  }
+
+  10% {
+    background: transparent;
+  }
+
+  15% {
+    background: red;
+  }
+
+  20% {
+    background: transparent;
+  }
+
+  25% {
+    background: red;
+  }
+
+  30% {
+    background: transparent;
+  }
+
+  35% {
+    background: red;
+  }
+
+  40% {
+    background: transparent;
+  }
+
+  100% {
+    background: transparent;
+  } */
+
+  0% {
+    background: rgba(245, 132, 3, 0.6);
+  }
+
+  50% {
+    background: rgb(245, 132, 3);
+  }
+
+  100% {
+    background: rgba(245, 132, 3, 0.5);
+  }
+}
+
+.home__adBlockFlyinContent::after {
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  bottom: 0.75em;
+  content: "";
+  left: 0.75em;
+  pointer-events: none;
+  position: absolute;
+  right: 0.75em;
+  top: 0.75em;
+}
+
+.home__adBlockContainer--flyin {
+  position: relative;
+}
+
+.home__adBlockFlyinClose {
+  background-color: transparent;
+  border: 0;
+  color: currentColor;
+  height: 1em;
+  padding: 1em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1em;
+  z-index: 1;
+}
+
+.home__adBlockFlyinClose::before,
+.home__adBlockFlyinClose::after {
+  content: "";
+  background-color: currentColor;
+  display: block;
+  height: 1em;
+  width: 1px;
+  position: absolute;
+  top: 0.5em;
+}
+
+.home__adBlockFlyinClose::before {
+  transform: rotate(45deg);
+}
+
+.home__adBlockFlyinClose::after {
+  transform: rotate(-45deg);
+}
+
+/*
+**
+** Home categories
+*****************************************************************/
+.home__categories {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 1em 0 0;
+}
+
+.home__category {
+  background: #eee;
+  text-align: center;
+  width: calc(25% - 0.75em);
+}
+
+.home__categoryContent {
+  padding: 0.5em 1em 1em;
+}
+
+.home__categoryTitle {
+  font-size: 140%;
+  margin: 0.5em 0 0.25em;
+}
+
+.home__categoryNote {
+  font-size: 60%;
+  margin-bottom: 1.25em;
+  text-transform: uppercase;
+}
+
+.home__categoryButton {
+  background-color: black;
+  color: white;
+  font-size: 80%;
+  display: block;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+}
+
+/*
+**
+** Home featured products
+*****************************************************************/
+.home__featuredProducts {
+  padding-bottom: 1em;
+}
+
+.home__featuredProductsTitle {
+  font-size: 180%;
+  margin: 0.5em 0;
+  padding: 0;
+  text-align: center;
+}
+
+.home__featuredProductsList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home__featuredProductsItem {
+  padding: 1em;
+  width: 25%;
+}
+
+.home__featuredProductsLink {
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+
+/* Rating */
+.home__featuredProductsRating {
+  display: flex;
+  margin: 0.5em 0;
+}
+
+.home__featuredProductsIcon {
+  fill: var(--pageLinkColor);
+  margin-right: 0.125em;
+  width: 1em;
+}
+
+.home__featuredProductsRatingCount {
+  color: #777;
+  margin-left: 0.375em;
+}
+
+.home__featuredProductsName {
+  display: block;
+}
+
+.home__featuredProductsPrice {
+  font-style: normal;
+}
+
+/*
+**
+** Home review
+*****************************************************************/
+.home__review {
+  position: relative;
+}
+
+.home__reviewImageContainer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.home__reviewImage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.home__reviewCaption {
+  background: rgba(245, 132, 3, 0.75);
+  color: white;
+  padding: 5em 0 4.5em;
+  position: relative;
+  text-align: center;
+}
+
+.home__reviewTitle {
+  border-bottom: solid 1px white;
+  font-size: 375%;
+  padding-bottom: 0.25em;
+}
+
+.home__reviewMessage {
+  font-size: 290%;
+  line-height: 1;
+  margin: 0.25em 0 1em;
+}
+
+.home__reviewButton {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+}
+
+/*
+**
+** Home blog
+*****************************************************************/
+.home__blogTitle {
+  font-size: 180%;
+  margin: 1.5em 0 1em;
+  padding: 0;
+  text-align: center;
+}
+
+.home__blogList {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home__blogItem {
+  background: #eee;
+  width: calc(33.334% - 0.6667em);
+}
+
+.home__blogContent {
+  padding: 1em;
+}
+
+.home__blogPostTitle {
+  font-size: 150%;
+  line-height: 1.25;
+  margin-bottom: 0.375em;
+}
+
+.home__blogFooter {
+  border-top: solid 1px #ccc;
+  margin-top: 1em;
+  padding-top: 0.75em;
+}
+
+.home__blogButton {
+  color: var(--pageLinkColor);
+  font-weight: bold;
+  text-decoration: none;
+}
